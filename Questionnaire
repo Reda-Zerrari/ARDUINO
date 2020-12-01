@@ -1,0 +1,127 @@
+int score = 0;
+int j = 1;
+int t=1;
+
+
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+pinMode(6,INPUT);
+pinMode(7,INPUT);
+
+}
+
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  
+
+   if (j == 1){
+    Serial.println(" Q1 : la capital du maroc est Rabat ");
+    Serial.println("    1- Vrai             2-Faux ");
+   
+    while(t){
+
+      if (digitalRead(6) == HIGH){
+        delay(300);
+        score++;  
+        t=0;
+        j++;}
+    
+      if (digitalRead(7) == HIGH){
+        delay(300);
+        Serial.println("no");
+        t=0;
+        j++;}
+      }
+  }
+
+     if (j == 2){
+     t=1;
+    Serial.println(" Q2 : la terre est plate ");
+    Serial.println("    1- Vrai             2-Faux ");
+   
+    while(t){
+
+      if (digitalRead(6) == HIGH){
+        delay(300);
+        score++;  
+        t=0;
+        j++;}
+    
+      if (digitalRead(7) == HIGH){
+        delay(300);
+        t=0;
+        j++;}
+      } 
+  }
+
+       if (j == 3){
+        t=1;
+    Serial.println(" Q3 : le Soleil est chaud ");
+    Serial.println("    1- Vrai             2-Faux ");
+   
+    while(t){
+
+      if (digitalRead(6) == HIGH){
+        delay(300);
+        score++;  
+        t=0;
+        j++;}
+    
+      if (digitalRead(7) == HIGH){
+        delay(300);
+        t=0;
+        j++;}
+      } 
+  }
+
+       if (j == 4){
+        t=1;
+    Serial.println(" Q4 : le Soleil est froid ");
+    Serial.println("    1- Vrai             2-Faux ");
+   
+    while(t){
+
+      if (digitalRead(6) == HIGH){
+        delay(300);
+        score++;  
+        t=0;
+        j++;}
+    
+      if (digitalRead(7) == HIGH){
+        delay(300);
+        t=0;
+        j++;}
+      } 
+  }
+
+       if (j == 5){
+        t=1;
+    Serial.println(" Q5 : c'est la question 5 ");
+    Serial.println("    1- Vrai             2-Faux ");
+   
+    while(t){
+
+      if (digitalRead(6) == HIGH){
+        delay(300);
+        score++;  
+        t=0;
+        j++;}
+    
+      if (digitalRead(7) == HIGH){
+        delay(300);
+        t=0;
+        j++;}
+      } 
+  }
+
+ if (j==6){
+Serial.print("votre score est: ");
+Serial.println(score);
+j++;}
+
+
+
+
+}
