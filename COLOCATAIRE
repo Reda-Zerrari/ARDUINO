@@ -1,0 +1,198 @@
+int t=1;
+int i=1;
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(2,INPUT);
+  pinMode(3,INPUT);
+  pinMode(4,INPUT);
+  pinMode(5,OUTPUT);
+  pinMode(6,OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+ digitalWrite(5,HIGH);
+ if (i==1){
+  t=1;
+  while(t){
+    Serial.println("            CO1");
+    Serial.println("          ANAS N°:35      ");
+    Serial.println("<PRECEDENT       SUIVANT>");
+    t=0;
+  }
+  t=1;
+  while(t){
+  if (digitalRead(2)== HIGH){
+    delay(300);
+    i++;
+    t=0;}
+  
+   if (digitalRead(4)== HIGH){
+    delay(300);
+    Serial.println("             ");
+    Serial.println("Vous sonnez chez : ANAS");
+    Serial.println("             ");
+        while(true){
+      char v = Serial.read();
+      if(v=='o') {
+        Serial.println("La porte est ouverte");
+        digitalWrite(5,LOW);
+        digitalWrite(6,HIGH);
+        delay(5000);
+        digitalWrite(6,LOW);
+        digitalWrite(5,HIGH);
+        Serial.println("La porte est fermée");
+        Serial.println("             ");
+        break;
+     
+      }
+    }
+     t=0; }
+ }
+
+  }
+ 
+ t=1;
+ if (i==2){
+  while(t){
+    Serial.println("            CO2");
+    Serial.println("          REDA N°:97      ");
+    Serial.println("<PRECEDENT       SUIVANT>");
+    t=0;
+  }
+  t=1;
+  while(t){
+  if (digitalRead(2)== HIGH){
+    delay(300);
+    i=i+1; 
+    t=0;
+  }
+    if (digitalRead(3)== HIGH){
+    delay(300);
+    i=i-1; 
+    t=0;
+  }
+     if (digitalRead(4)== HIGH){
+    delay(300);
+    Serial.println("             ");
+    Serial.println("Vous sonnez chez : REDA");
+    Serial.println("             ");
+    while(true){
+      char v = Serial.read();
+      if(v=='o') {
+        Serial.println("La porte est ouverte");
+        digitalWrite(5,LOW);
+        digitalWrite(6,HIGH);
+        delay(5000);
+        digitalWrite(6,LOW);
+        digitalWrite(5,HIGH);
+        Serial.println("La porte est fermée");
+        Serial.println("             ");
+        break;
+     
+      }
+    }
+     t=0; 
+    }
+    
+  }
+  
+  }
+
+  t=1;
+ if (i==3){
+  while(t){
+    Serial.println("            CO3");
+    Serial.println("          FATI N°:07      ");
+    Serial.println("<PRECEDENT       SUIVANT>");
+    t=0;
+  }
+  t=1;
+  while(t){
+  if (digitalRead(2)== HIGH){
+    delay(300);
+    i=i+1; 
+    t=0;
+  }
+    if (digitalRead(3)== HIGH){
+    delay(300);
+    i=i-1; 
+    t=0;
+  }
+     if (digitalRead(4)== HIGH){
+    delay(300);
+    Serial.println("             ");
+    Serial.println("Vous sonnez chez : FATI");
+    Serial.println("             ");
+        while(true){
+      char v = Serial.read();
+      if(v=='o') {
+        Serial.println("La porte est ouverte");
+        digitalWrite(5,LOW);
+        digitalWrite(6,HIGH);
+        delay(5000);
+        digitalWrite(6,LOW);
+        digitalWrite(5,HIGH);
+        Serial.println("La porte est fermée");
+        Serial.println("             ");
+        break;
+     
+      }
+    }
+     t=0; }
+  }
+  
+  }
+
+  t=1;
+ if (i==4){
+  while(t){
+    Serial.println("           CO4");
+    Serial.println("          HAITAM N°:56     ");
+    Serial.println("<PRECEDENT       SUIVANT>");
+    t=0;
+  }
+  t=1;
+  while(t){
+  if (digitalRead(2)== HIGH){
+    delay(300);
+    i=i+1; 
+    t=0;
+  }
+    if (digitalRead(3)== HIGH){
+    delay(300);
+    i=i-1; 
+    t=0;
+  }
+     if (digitalRead(4)== HIGH){
+    delay(300);
+    Serial.println("             ");
+    Serial.println("Vous sonnez chez : HAITAM");
+    Serial.println("             ");
+        while(true){
+      char v = Serial.read();
+      if(v=='o') {
+        Serial.println("La porte est ouverte");
+        digitalWrite(5,LOW);
+        digitalWrite(6,HIGH);
+        delay(5000);
+        digitalWrite(6,LOW);
+        digitalWrite(5,HIGH);
+        Serial.println("La porte est fermée");
+        Serial.println("             ");
+        break;
+     
+      }
+    }
+     t=0; }
+  }
+  
+  }
+t=0;
+
+
+
+  
+}
